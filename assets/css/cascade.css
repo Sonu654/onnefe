@@ -1,0 +1,79 @@
+.txtbox
+{
+	height:25px;
+	width:31%;
+	border-radius:5px ;
+	border-style:solid;
+	border-color:skyblue;
+        margin: 2px 0px;
+        padding: 5px 0px;
+}
+.txtbox2
+{
+	height:30px;
+	width:32%;
+	border-radius:10px ;
+	border-style:solid;
+	border-color: darkmagenta;
+        margin: 5px 25%;
+        
+}
+
+.btn-link{
+        
+        border-radius: 5px;
+        border:solid 1px honeydew;
+        cursor: pointer;
+        height: 30px;
+        text-align: center;
+        margin: 5px 0px;
+        background-color: activecaption;
+        
+    
+}
+
+.btn-link:hover{
+    background-color:  deepskyblue;
+}
+
+.btn-link:active{
+    background-color:whitesmoke;
+}
+
+select.txtbox{
+    cursor: pointer;
+    height: 35px;
+    
+}
+
+select:nth-child{
+    border:1px solid deepskyblue;
+    border-radius: 5px;
+    cursor:pointer;
+    
+}
+
+.checkbox{
+        cursor: pointer;
+        border-radius:5px ;
+	border-style:solid;
+	border-color:skyblue;
+        margin: 2px 0px;
+        padding: 5px 0px;
+}
+
+.btn-submit{
+     border-radius: 5px;
+        border:solid 1px honeydew;
+        cursor: pointer;
+        height: 30px;
+        width:25%;
+        text-align: center;
+        margin: 5px 0px;
+        background-color: cornflowerblue;
+        font-weight: bold;
+}
+
+.btn-submit:hover{
+    background-color: greenyellow;
+}
