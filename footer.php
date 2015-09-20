@@ -1,6 +1,7 @@
-<footer style="bottom: 0px; color: black; text-align: center; margin-top:3%; position: fixed">
+<footer>
     ONNEFE &copy; NSSSS
 </footer>
+</body>
 </html>
     <?php
 

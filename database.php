@@ -7,11 +7,11 @@ $con = mysql_connect($server, $user, $key) or die(mysql_error()); // connect db 
 mysql_select_db($database, $con) or die(mysql_error()); //select database
 
 function get_news_all() {
-    $qry1 = "select * from news n order by news_id DESC";
+    $qry1 = "select * from news order by news_id DESC";
     if ($result = mysql_query($qry1)) {
         while ($res = mysql_fetch_array($result)) {
             ?>
-            <div class="row" style="background:  #999; vertical-align: baseline; border:solid 1px red;">
+            <div class="row" style="background:  #999; vertical-align: baseline;">
                 <div class="col-sm-12" style='border: solid black 1px;' >
                     <h4><?php echo $res['news_heading']; ?></h4>
                 </div>
@@ -25,20 +25,20 @@ function get_news_all() {
             ?>
             <div class='row' style='margin: 0px; text-align: center;'>
 
-                 <div class="col-sm-3" style='float:left;'> 
-                     <h4><?php echo $category_name; ?></h4>
-                 </div>
+                <div class="col-sm-3" style='float:left;'> 
+                    <h4><?php echo $category_name; ?></h4>
+                </div>
                 <div class="col-sm-3" style='margin-left:10%;'> 
-                    
-                    <?php if($res['nat_int']){
-                        $NatInt="International";
-                    }else{
-                        $NatInt="National";
+
+                    <?php
+                    if ($res['nat_int']) {
+                        $NatInt = "International";
+                    } else {
+                        $NatInt = "National";
                     }
-                    
                     ?> 
-                    <h4><?php echo $NatInt;?></h4>
-                 </div>
+                    <h4><?php echo $NatInt; ?></h4>
+                </div>
                 <div class="col-sm-3" style='float:right;'>
                     <h4> <?php echo $res['date'] . ',' . $res['time']; ?></h4>
                 </div>
@@ -80,12 +80,12 @@ function get_nav_bar() {
     $i = 0;
     $qry = mysql_query("select category_name from category");
     while ($result = mysql_fetch_array($qry) and $i < 5) {
-        ?> <nav>
-
-            <a href="#" class="<?php echo $result['category_name']; ?>">
+        ?>        
+<div class="btn-link col-sm-2" style="margin-left: 12px;">
+            <a href="#" href="<?php echo $result['category_name'].".php"; ?>">
                 <?php echo $result['category_name']; ?> </a>
 
-        </nav>
+        </div>
         <?php
         $i++;
     }

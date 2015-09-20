@@ -1,4 +1,5 @@
-<?php $title = "Login";
+<?php
+$title = "Login";
 require_once 'header.php';
 ?>
 <div class="containner">
@@ -6,12 +7,18 @@ require_once 'header.php';
     <div class="row">
         <div class="col-sm-8" style="">
             <div class="row">
-<?php get_nav_bar(); ?>
+                <div class="col-sm-12" style=" height: 40px; vertical-align: bottom; background: black; color: white;" >
+                    <nav>
+                        <?php get_nav_bar(); ?>
+                    </nav>
+                </div>
             </div>
             <div class='row'>
-               <marquee direction="up" style="marquee-style: alternate; height:600px;  marquee-loop: infinite; marquee-speed: normal" >
+                <div>
+                    <marquee direction="up" style="marquee-style: alternate; height:600px;  marquee-loop: infinite; marquee-speed: normal" >
                         <?php get_news_all(); ?>
-                </marquee>
+                    </marquee>
+                </div>
             </div>
         </div>
         <div class="col-sm-4">
@@ -40,7 +47,7 @@ require_once 'header.php';
                     </div>
                 </form>
             </div>
-            <a href="forgot.php">Forgot Password </a>
+            <a href="forgot.php">Forgot Password</a>
         </div>
     </div>
 </div>

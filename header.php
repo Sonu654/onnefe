@@ -13,11 +13,11 @@ include_once 'database.php';
         <title><?php echo $title; ?></title>
     </head>
     <body>
-        <header> <h1>ONNEFE</h1></header>
-  <?php
- 
+        <header class="header"> <h1>ONNEFE</h1></header>
+        
        
-     
+ <?php    
+
 
 /*
  * To change this template, choose Tools | Templates

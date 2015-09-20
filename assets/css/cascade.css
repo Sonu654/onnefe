@@ -77,3 +77,23 @@ select:nth-child{
 .btn-submit:hover{
     background-color: greenyellow;
 }
+
+.header{
+    margin-top: -2%;
+    height: auto;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+footer{
+    bottom: 0px; 
+    text-align: center; 
+    margin-top:3%;
+    position: relative;
+    height:40px;
+    color: white;
+    background: black;
+    width:100%;
+    vertical-align: bottom;
+}
