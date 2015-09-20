@@ -40,7 +40,7 @@ require_once 'header.php';
                     </div>
                 </form>
             </div>
-            <a href="forgot.php">Forgot Password</a>
+            <a href="forgot.php">Forgot Password </a>
         </div>
     </div>
 </div>
