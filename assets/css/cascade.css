@@ -22,18 +22,23 @@
 .btn-link{
         
         border-radius: 5px;
-        border:solid 1px honeydew;
+        border:solid 1px black;
         cursor: pointer;
         height: 30px;
         text-align: center;
         margin: 5px 0px;
-        background-color: activecaption;
+        background-color: coral;
         
     
 }
 
 .btn-link:hover{
     background-color:  deepskyblue;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    vertical-align: baseline;
 }
 
 .btn-link:active{
@@ -90,8 +95,9 @@ footer{
     bottom: 0px; 
     text-align: center; 
     margin-top:3%;
-    position: relative;
-    height:40px;
+    position: fixed;
+    border-radius: 15px;
+    height:150px;
     color: white;
     background: black;
     width:100%;
