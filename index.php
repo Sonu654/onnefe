@@ -15,7 +15,7 @@ require_once 'header.php';
             </div>
             <div class='row'>
                 <div>
-                    <marquee direction="up" style="marquee-style: alternate; height:600px;  marquee-loop: infinite; marquee-speed: normal" >
+                    <marquee direction="up" onMouseover="this.stop()" onMouseout="this.start()" style="marquee-style: alternate; marquee-speed: slow; height:600px;  marquee-loop: infinite; marquee-speed: normal" >
                         <?php get_news_all(); ?>
                     </marquee>
                 </div>
