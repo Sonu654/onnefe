@@ -6,6 +6,7 @@ $key = "";
 $con = mysql_connect($server, $user, $key) or die(mysql_error()); // connect db or put error
 mysql_select_db($database, $con) or die(mysql_error()); //select database
 
+  
 function get_news_all() {
     $qry1 = "select * from news order by news_id DESC";
     if ($result = mysql_query($qry1)) {
@@ -78,18 +79,20 @@ function get_interest() {
 
 function get_nav_bar() {
     $i = 0;
-    $qry = mysql_query("select category_name from category");
-    while ($result = mysql_fetch_array($qry) and $i < 5) {
+    $qry = mysql_query("select * from category");
+    while ($result = mysql_fetch_array($qry)){// and $i < 5) {
         ?>        
-<div class="btn-link col-sm-2" style="margin-left: 12px;">
-            <a href="#" href="<?php echo $result['category_name'].".php"; ?>">
-                <?php echo $result['category_name']; ?> </a>
+<div class="col-sm-2">
+    <button class="btn-link" onClick="show_rel_news(<?php echo $result['category_id'] ?>)">
+                <?php echo $result['category_name']; ?> </button>
 
         </div>
         <?php
-        $i++;
+        //$i++;
     }
 }
+
+
 
 //  get_user();
 ?>

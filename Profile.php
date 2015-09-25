@@ -1,7 +1,6 @@
 <?php
 $title = "User Profile";
-session_start();
-if (isset($_SESSION['user_id'])) {
+
     require 'header.php';
     $qry="Select * from user_info where user_id = '".$_SESSION['user_id']."'";
     $user_info=  mysql_query($qry) or die(mysql_error());
@@ -30,7 +29,8 @@ if (isset($_SESSION['user_id'])) {
     
     <?php
     require 'footer.php';
-} else {
-    header('location:index.php');
+/*} else {
+ 
 }
 ?>
+*/

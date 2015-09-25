@@ -1,25 +1,40 @@
 <?php
-$title="Welcome";
-include 'header.php';
-session_start();
-if(isset($_SESSION['user_id'])){
-
-echo '<h1>'.  session_id().'</h1><bt>';
-echo '<h1>'. session_name().'</h1><bt>';
-echo '<h1>'. session_status().'</h1><bt>';
-echo '<h1>'.$_SESSION['user_id'].'</h1>';
+$title = "Main Page";
+include_once 'header.php';
 ?>
-<a class="btn-link" href="profile.php" alt="Profile" title="profile">Profile</a>
-<a class="btn-link" href="logout.php" alt="logout" title="logout">Logout</a>
-<?php
-       // get_nav_user();
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-include 'footer.php';
-}else{
-         header('location:index.php');
-}?>
+<div class="containner">
+    <div class="row">
+        <div class="col-sm-2" style="text-align: right; font-size:15px ">
+            <ul style="display: inline; list-style: none;">
+                <li><a href="#" alt="update your profile">Update Profile</a></li>
+                <li><a href="#" alt="update your News categories">Update Category</a></li>
+                <li><a href="logout.php" alt="log out from profile">LogOut</a></li>
+                <li><a href="#" alt="update your profile">Update Profile</a></li>
+                <li><a href="#" alt="update your News categories">Update Category</a></li>
+                <li><a href="index.php" alt="log out from profile">LogOut</a></li>
+                <li><a href="#" alt="update your profile">Update Profile</a></li>
+                <li><a href="#" alt="update your News categories">Update Category</a></li>
+                <li><a href="logout.php" alt="log out from profile">LogOut</a></li>
+                <li><a href="#" alt="update your profile">Update Profile</a></li>
+                <li><a href="#" alt="update your News categories">Update Category</a></li>
+                <li><a href="logout.php" alt="log out from profile">LogOut</a></li>
+                <li><a href="#" alt="update your profile">Update Profile</a></li>
+                <li><a href="#" alt="update your News categories">Update Category</a></li>
+                <li><a href="logout.php" alt="log out from profile">LogOut</a></li>
+            </ul>    
+        </div>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-12" >
+                    <nav>
+                        <?php get_nav_bar(); ?>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div id="news"> </div>
+            </div>
+        </div>
+    </div>
+</div>
 
