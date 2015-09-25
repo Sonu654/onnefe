@@ -11,6 +11,8 @@ include_once 'database.php';
         <link rel="stylesheet" href="assets/css/cascade.css"/>
         <script src="assets/js/script.js" type="text/javascript"></script>
          <script src="assets/js/ajax_req.js" type="text/javascript"></script>
+         <script src="assets/js/jquery.js" type="text/javascript"></script>
+         <script src="assets/js/jquery_script.js" type="text/javascript"></script>
         <title><?php echo $title; ?></title>
     </head>
     <body>

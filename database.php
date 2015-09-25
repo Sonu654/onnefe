@@ -92,7 +92,11 @@ function get_nav_bar() {
     }
 }
 
-
+if(isset($_GET['user_id'])){
+   $qry=  mysql_query("select login_password  from login_info where login_id='".$_GET['user_id']."'");
+   $pass=mysql_result($qry,0,'login_password');
+   echo $pass;
+}
 
 //  get_user();
 ?>
