@@ -1,11 +1,11 @@
-<!--<footer>
-  <!--  <div style="height: 100px;">
-        this is sitemap;
+<footer>
+ <div style="">
+        this is sitemap
     
     </div>
 
     <h4 style="vertical-align: bottom; bottom:0px;">ONNEFE &copy; NSSSS</h4>
-</footer>-->
+</footer>
 </body>
 </html>
     <?php

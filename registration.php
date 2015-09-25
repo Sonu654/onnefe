@@ -21,12 +21,12 @@ require_once 'header.php';
             </div>
             <div class="row">
                 <form name="registration" action="register.php" method="post">
-                    <div>
+                    <div class="row">
                         <input type="text" name="f_name" placeholder="First Name" required class="txtbox"/>
                         <input type="text" name="m_name" placeholder="Middle Name" class="txtbox"/>
                         <input type="text" name="l_name" placeholder="Last Name" required class="txtbox"/>
                     </div>
-                    <div>
+                    <div class="row">
                         <select name="gender" class="txtbox">
                             <option>I am</option>
                             <option value="male">Male</option>
@@ -36,13 +36,15 @@ require_once 'header.php';
                         <input type="email" name="email" placeholder="Your Email Id" required class="txtbox"/>
 
                     </div>
-                    <div>
+                    <div class="row">
+
                         <input type="password" name="password" min="8" placeholder="Password" required  class="txtbox" id="password"/>
                         <input type="password" name="re_password" placeholder="Repeat Password" required min="8" class="txtbox" id="re-pass"/>
-                        <select name="interest" class="txtbox" multiple="multiple">
-                            <option>I am Interested</option>
-                            <?php get_interest(); ?>
-                        </select>
+
+
+                        <a onMouseover="show_interest()" onclick="show_interest()" onMouseout="hide_interest()">Select Interest
+                                 <ul id="interest" style="display: none; list-style: none; padding: 0px">
+                        <?php  get_interest(); ?></ul></a>
                     </div>
                     <div>
                         <lable>Address : </lable>

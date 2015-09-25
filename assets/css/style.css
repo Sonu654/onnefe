@@ -36,8 +36,8 @@ root {
 {
     position:relative;
     min-height:1px;
-    display:inline-block;
-    vertical-align:bottom;
+    display: inline-block;
+    vertical-align:top;
     padding:0px;
     margin:0px;
  }

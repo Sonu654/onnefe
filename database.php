@@ -70,10 +70,15 @@ function get_user() {
 }
 
 function get_interest() {
-    $qry = "select * from category";
+    $qry = "select * from category order by category_id ASC";
     $result = mysql_query($qry) or die(mysql_error());
     while ($res = mysql_fetch_array($result)) {
-        echo '<option value=' . $res['category_id'] . '>' . $res['category_name'] . '</option>';
+    ?>
+        <li><input type="checkbox" value="<?php echo $res['category_id'];?> name="r1">
+            <?php echo $res['category_name'];?>
+        </li>
+        <?php
+       
     }
 }
 

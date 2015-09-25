@@ -28,12 +28,12 @@
  session_start();
         include 'header.php';?>
         
-   <div id="pass_res"></div>
+<div id="pass_res" style="color:red;"></div>
         <form name="update_pass" action="" method="POST">
             <input type="password" name="opass" class="txtbox" placeholder="enter current password" id="c_u_pass" required onBlur="get_server_pass('<?php echo $_SESSION['user_id'];?>')"/>
             <input type="hidden" name="c_pass" id="c_s_pass">
         <input type="password" name="npass" class="txtbox" placeholder="enter new password" id="n_u_pass" required/>
-        <input type="password" class="txtbox" name="rnpass" placeholder="Re-enter new password" id="r_n_u_pass" required/><br/>
+        <input type="password" class="txtbox" name="rnpass" placeholder="Re-enter new password" id="r_n_u_pass" required onkeypress="match_pass()" onblur="match_pass()"/><br/>
         <input type="submit" class="txtbox2" name="sbmt" value="change password" onclick="match();"/>
         </form>
 
