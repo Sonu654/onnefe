@@ -74,8 +74,8 @@ function get_interest() {
     $result = mysql_query($qry) or die(mysql_error());
     while ($res = mysql_fetch_array($result)) {
     ?>
-        <li><input type="checkbox" value="<?php echo $res['category_id'];?> name="r1">
-            <?php echo $res['category_name'];?>
+        <li><input type="checkbox" value="<?php echo $res['category_id'];?>" name="r1">
+            <?php echo $res['category_name']; ?>
         </li>
         <?php
        

@@ -1,7 +1,15 @@
-$(document).ready(function () {
-    
-      $('#profile').click(function () {
-        $('#show_pro').toggle();
-        $('#edit_pro').toggle();
-    });
-});
+jquery=$;
+
+jquery(document).ready(
+        function ()
+        {
+
+            jquery('#profile').click(
+                    function ()
+                    {
+                        jquery('#show_pro').toggle();
+                        jquery('#edit_pro').toggle();
+                    }
+            );
+        }
+);
