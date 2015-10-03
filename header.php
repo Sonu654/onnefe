@@ -1,6 +1,7 @@
 <?php
 include_once 'database.php';
 
+   
 
 ?>
 <!DOCTYPE html>
@@ -20,8 +21,6 @@ include_once 'database.php';
         
        
  <?php    
-
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.

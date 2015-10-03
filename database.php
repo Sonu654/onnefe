@@ -6,7 +6,15 @@ $key = "";
 $con = mysql_connect($server, $user, $key) or die(mysql_error()); // connect db or put error
 mysql_select_db($database, $con) or die(mysql_error()); //select database
 
-  
+function loggedin(){
+    session_start();
+    if(isset($_SESSION['user_id'])or !empty($_SESSION['user_id'])){
+        return(TRUE);
+    }  else {
+        return FALSE;
+    }
+}
+
 function get_news_all() {
     $qry1 = "select * from news order by news_id DESC";
     if ($result = mysql_query($qry1)) {
