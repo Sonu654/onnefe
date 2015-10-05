@@ -16,7 +16,7 @@ include_once 'database.php';
          <script src="assets/js/jquery_script.js" type="text/javascript"></script>
         <title><?php echo $title; ?></title>
     </head>
-    <body>
+    <body style="vertical-align: bottom;">
         <header class="header"> <h1>ONNEFE</h1></header>
         
        

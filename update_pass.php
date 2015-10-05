@@ -5,11 +5,11 @@
         $qry=  mysql_query("select login_password  from login_info l_i where l_i.login_id='".$_SESSION["user_id"]."'")
             or die(mysql_error());
         $qry=mysql_result($qry,0,'password');
-        if(md5($_POST['opass'])==$qry)
+        if($_POST['opass']==$qry)
         {
             if($_POST['npass']==$_POST['rnpass'])
             {
-                $pass=md5($_POST['npass']);
+                $pass=($_POST['npass']);
                 $qry=mysql_query("update login_info set login_password='$pass' where login_id='".$_SESSION['user_id']."'")or die(mysql_error());
                 echo 'password changed sucessfully';
                 

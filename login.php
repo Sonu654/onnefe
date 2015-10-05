@@ -1,7 +1,5 @@
 <?php
 
-
-
 require 'database.php';
 if (isset($_POST['login_id']) or isset($_POST['password'])) {
     if (!empty($_POST['login_id']) or ! empty($_POST['password'])) {
@@ -20,13 +18,21 @@ if (isset($_POST['login_id']) or isset($_POST['password'])) {
                 session_start();
 
                 $_SESSION['user_id'] = $_POST['login_id'];
-                $_SESSION['login_date']=$date;
-                $_SESSION['time']=$time;
+                $_SESSION['login_date'] = $date;
+                $_SESSION['time'] = $time;
+                
+                $user = strtolower(substr($_SESSION['user_id'], strpos($_SESSION['user_id'], '@') + 1));
+                if ($user == 'admin.onnefe') {
+                    $_SESSION['admin'] = TRUE;
+                } else {
+                    $_SESSION['admin'] = FALSE;
+                }
+                
                 header('location:main.php');
             } else {
-                die('1'.mysql_error());
+                die('1' . mysql_error());
             }
-        }else{
+        } else {
             echo 'Password is not correct';
         }
     }

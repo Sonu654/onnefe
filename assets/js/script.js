@@ -42,14 +42,14 @@ function match()
         document.getElementById('n_u_pass').value = "";
         document.getElementById('r_n_u_pass').value = "";
         document.getElementById('c_u_pass').focus();
-        return false;
-    } else {
-        if ((document.getElementById('n_u_pass')) != (document.getElementById('r_n_u_pass'))) {
-            document.getElementById('n_u_pass').value = "";
+        
+    } 
+    if ((document.getElementById('n_u_pass')) != (document.getElementById('r_n_u_pass')))  {
+          document.getElementById('n_u_pass').value = "";
             document.getElementById('r_n_u_pass').value = "";
             document.getElementById('pass_res').innerHTML = "new password does't match please enter again";
             document.getElementById('n_u_pass').focus();
-        }
+       
     }
 }
 
