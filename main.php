@@ -12,10 +12,10 @@ include_once 'header.php';
                 <li class="btn-link"><a href="update_pass.php" alt="update your Password">Change Password</a></li>
                 <?php if ($_SESSION['admin']) { ?>
                     <li class="btn-link"><a href="update_news.php" alt="update your Password">Update News</a></li>
-                    <li class="btn-link"><a href="update_pass.php" alt="update your Password">Update User</a></li>
-                    <li class="btn-link"><a href="update_pass.php" alt="update your Password">update Category</a></li>
+                    <li class="btn-link"><a href="update_user.php" alt="update your Password">Update User</a></li>
+                    <li class="btn-link"><a href="update_cat.php" alt="update your Password">update Category</a></li>
                     <li class="btn-link"><a href="update_pass.php" alt="update your Password">Change Password</a></li>
-                    <li class="btn-link"><a href="update_pass.php" alt="update your Password">Check Login Log</a></li>
+                    <li class="btn-link"><a href="view_login_log.php" alt="update your Password">View Login Log</a></li>
                     
                 <?php } ?>
                 <li class="btn-link"><a href="logout.php" alt="log out from profile">LogOut</a></li>
