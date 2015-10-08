@@ -41,7 +41,8 @@ function get_server_pass(user_id){
 function handleServerResponse_server_pass(){ 
     if(xmlHttp.readyState==4){
         if(xmlHttp.status==200){
-            document.update_pass.c_pass.value= xmlHttp.responseText;
+          pass= document.update_pass.c_pass.value= xmlHttp.responseText;
+            
         }
     }
 }

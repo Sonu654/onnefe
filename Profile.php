@@ -6,28 +6,17 @@ $qry = "Select * from user_info where user_id = '" . $_SESSION['user_id'] . "'";
 $user_info = mysql_query($qry) or die(mysql_error());
 $qry1 = "select * from user_address where user_id= '" . $_SESSION['user_id'] . "'";
 $user_add = mysql_query($qry1) or die(mysql_error());
+
 ?>
 
 <div class="containner">
-    <div class="row">
+    
+    <div class="row" id=""> 
         <div class="col-sm-4">
 
-        </div>
-        <div class="col-sm-8">
-
-            <div class="col-sm-8"></div>  
-            <div class="col-sm-4">
-                <button class="btn-submit" id='profile' style="width:100px; float:right;">Edit Profile</button>
-            </div>
-        </div>
-
-    </div>
-    <div class="row" id="">
-        <div class="col-sm-4">
-
-        </div>
+        </div >
         <div class="col-sm-8" id='show_pro'>
-            <table >
+           <table >
                 <?php while ($result = mysql_fetch_array($user_info)) {
                     ?>
 
@@ -86,7 +75,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                             <label for="Address">Address</label>
                         </td>
                         <td>
-                            :
+                            
                         </td>
                         <td>
 
@@ -100,7 +89,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                             :
                         </td>
                         <td>
-    <?php echo $user_ad['local_add']; ?>
+                            <?php echo $user_ad['local_add']; ?>
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +100,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                             :
                         </td>
                         <td>
-    <?php echo $user_ad['city']; ?>
+                            <?php echo $user_ad['city']; ?>
                         </td>
                     </tr>
                     <tr>
@@ -122,7 +111,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                             :
                         </td>
                         <td>
-    <?php echo $user_ad['state']; ?>
+                            <?php echo $user_ad['state']; ?>
                         </td>
                     </tr>
                     <tr>
@@ -133,11 +122,24 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                             :
                         </td>
                         <td>
-    <?php echo $user_ad['country']; ?>
+                            <?php echo $user_ad['country']; ?>
                         </td>
                     </tr>
                 </table>
-                <div>
+                 <div>
+                     
+                </div>
+                <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-8">
+
+                    <div class="col-sm-8"></div>  
+                    <div class="col-sm-4">
+                        <button class="btn-submit" id='profile' style="width:100px; float:right;">Edit Profile</button>
+                    </div>
+                 </div>
 
                 </div>
                 <?php
@@ -146,7 +148,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
         </div>
 
         <div class="col-sm-8"  id='edit_pro' style='display:none;'>
-            <form name="edit_profile">
+            <form name="edit_profile" method="POST" action="edit_prof.php">
                 <table>
                     <?php
                     $re = mysql_query($qry);
@@ -211,7 +213,7 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                                 <label for="Address">Address</label>
                             </td>
                             <td>
-                                :
+                                
                             </td>
                             <td>
 
@@ -264,7 +266,13 @@ $user_add = mysql_query($qry1) or die(mysql_error());
                         </tr>
                    <?php
                 } 
-                ?>                
+                ?>  
+                        <tr>
+                            <td colspan="3">
+                                <button class="btn-submit" type="submit" style="width:100px; float:right;">Save Changes</button>
+                                
+                            </td>
+                        </tr>
                 </table>
             </form>  
         </div>
