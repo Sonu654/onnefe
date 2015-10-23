@@ -2,7 +2,9 @@
 session_start();
 $title = "Main Page";
 include_once 'header.php';
+
 ?>
+
 <div class="containner" style="background:#CCCCFF; min-height:550px;">
     <div class="row" >
         <div class="col-sm-2" style="text-align: right; font-size:15px; margin-top: -1.8%;">
