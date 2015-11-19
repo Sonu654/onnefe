@@ -18,22 +18,25 @@ if (isset($_POST['login_id']) or isset($_POST['password'])) {
                 session_start();
 
                 $_SESSION['user_id'] = $_POST['login_id'];
-                setcookie('user_id',$_SESSION['user_id']);
                 $_SESSION['login_date'] = $date;
-                setcookie('login_date',$_SESSION['login_date']);
                 $_SESSION['time'] = $time;
-                setcookie('time',$_SESSION['date']);
-                
                 $user = strtolower(substr($_SESSION['user_id'], strpos($_SESSION['user_id'], '@') + 1));
                 if ($user == 'admin.onnefe') {
                     $_SESSION['admin'] = TRUE;
-                    setcookie('user',$_SESSION['admin']);
                 } else {
                     $_SESSION['admin'] = FALSE;
-                     setcookie('user',$_SESSION['admin']);
+                }
+                if($_POST['rem']=='1'){
+                    echo 'setting cookies';
+                setcookie('user_id',$_SESSION['user_id']);
+                setcookie('login_date',$_SESSION['login_date']);
+                setcookie('time',$_SESSION['time']);
+                setcookie('user',$_SESSION['admin']);
+                
+                
                 }
                 
-                header('location:main.php');
+               header('location:main.php');
             } else {
                 die('1' . mysql_error());
             }

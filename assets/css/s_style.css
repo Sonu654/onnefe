@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 17, 2015, 5:45:54 PM
+    Author     : Sanwal
+*/
+body{
+    background: rgba(275,275,275,1.0);
+}
+
+.icon , .menu_element{
+    height: 20px;
+  //  border: dotted 1px aqua;
+}
+.menu_element{
+    margin: 3px 0;
+}
+.icon{
+    width: 20px;
+}
+.element_menu{
+   }
+
+.icon_list{
+    margin-left: 1px;
+    padding: 2px;
+    position: relative;
+    float: right;
+    display: inline-block;
+   }
+
+.icon:hover{
+    width:24px;
+}
+
+.deactive{
+    cursor:not-allowed;
+}
+
+.main_left{
+    width: 15%;
+    float: left;
+    height:auto;
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+    border-top:dotted 1px #000000;
+}
+
+.wrapper{
+  }
+
+.user{
+    height: 40px;
+    border:dotted 1px #000000;
+    margin-bottom: 5px;
+
+}
+
+.main_{
+    float: right;
+    width: 84%;
+    display:inline-block;
+    position: relative;
+    border-left: dotted 1px black;
+    margin: 2px;
+ }
+
+.main_logo{
+    height:auto;
+    width:100%;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.hr{
+    margin:5px 0;   
+    border: dotted 1px black;
+}
+
+.user_name{
+    
+}

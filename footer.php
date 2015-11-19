@@ -1,10 +1,5 @@
 <footer>
- <div style="">
-        this is sitemap
-    
-    </div>
-
-    <h4 style="vertical-align: bottom; bottom:0px;">ONNEFE &copy; NSSSS</h4>
+     <h4 style="vertical-align: bottom; bottom:0px;">ONNEFE &copy; NSSSS</h4>
 </footer>
 </body>
 </html>

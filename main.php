@@ -1,42 +1,39 @@
 <?php
-session_start();
 $title = "Main Page";
 include_once 'header.php';
-
+if(!loggedin()){
+    header("location:home.php");
+}
 ?>
+<div class="wrapper">
+    <div class="main_left">
+        <img class="main_logo" src="assets/img/logo.png">
+        <div class="hr"></div>
+        <div class="user">
+            <div class="user_name">Welcome : <?php echo $_SESSION['user_id']; ?></div>
 
-<div class="containner" style="background:#CCCCFF; min-height:550px;">
-    <div class="row" >
-        <div class="col-sm-2" style="text-align: right; font-size:15px; margin-top: -1.8%;">
-            <ul style="display: inline; list-style: none;">
-                <li class="btn-link"><a href="profile.php" alt="update your profile">Update Profile</a></li>
-                <li class="btn-link"><a href="#" alt="update your News interests">Update Interests</a></li>
-                <li class="btn-link"><a href="update_pass.php" alt="update your Password">Change Password</a></li>
-                <?php if ($_SESSION['admin']) { ?>
-                    <li class="btn-link"><a href="update_news.php" alt="update your Password">Update News</a></li>
-                    <li class="btn-link"><a href="update_user.php" alt="update your Password">Update User</a></li>
-                    <li class="btn-link"><a href="update_cat.php" alt="update your Password">update Category</a></li>
-                    <li class="btn-link"><a href="update_pass.php" alt="update your Password">Change Password</a></li>
-                    <li class="btn-link"><a href="view_login_log.php" alt="update your Password">View Login Log</a></li>
-                    
-                <?php } ?>
-                <li class="btn-link"><a href="logout.php" alt="log out from profile">LogOut</a></li>
-            </ul>    
         </div>
-        <div class="col-sm-10">
-            <div class="row">
-                <div class="col-sm-12" >
-                    <nav>
-                        <?php get_nav_bar(); ?>
-                    </nav>
-                </div>
-            </div>
-            <div class="row">
-                <div id="news"> </div>
-            </div>
+        <div>
+            <?php get_menu(); ?>
         </div>
     </div>
+    <div class="main_">
+        <div class="hr"></div>
+        <div class="central">  
+
+            <div id="news"> 
+                <h1>Please Click on a label!!!</h1>
+            </div>
+
+        </div>
+        <div class="right">
+            <nav>
+                <?php get_nav_bar(); ?>
+            </nav>
+        </div>
+
+    </div>
 </div>
-<?php
-include 'footer.php';?>
+
+<?php include 'footer.php'; ?>
 

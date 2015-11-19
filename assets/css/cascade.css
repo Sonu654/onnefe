@@ -1,3 +1,5 @@
+.header{}
+
 body{
     font-family: arial;
 }
@@ -87,13 +89,6 @@ select:nth-child{
     background-color: greenyellow;
 }
 
-.header{
-    margin-top: -2%;
-    height: auto;
-    
-    color: black;
-    text-align: center;
-}
 
 footer{
     bottom: 0px; 
